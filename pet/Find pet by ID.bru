@@ -17,3 +17,9 @@ params:path {
 headers {
   api_key: {{apiKey}}
 }
+
+tests {
+  test("Status code test", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}

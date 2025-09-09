@@ -28,3 +28,9 @@ body:json {
     "status": ""
   }
 }
+
+tests {
+  test("Status code test", function() {
+    expect(res.getStatus()).to.equal(200);
+  });
+}
