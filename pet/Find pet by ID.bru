@@ -1,0 +1,19 @@
+meta {
+  name: Find pet by ID.
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/pet/:petId
+  body: none
+  auth: inherit
+}
+
+params:path {
+  petId: 7
+}
+
+headers {
+  api_key: {{apiKey}}
+}

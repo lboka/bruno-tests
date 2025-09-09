@@ -1,0 +1,22 @@
+{
+  "version": "1",
+  "name": "Swagger Petstore for GIT",
+  "type": "collection",
+  "scripts": {
+    "moduleWhitelist": [
+      "fs",
+      "path",
+      "js-yaml",
+      "ajv",
+      "ajv-formats"
+    ],
+    "filesystemAccess": {
+      "allow": true
+    },
+    "flow": "sandwich"
+  },
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

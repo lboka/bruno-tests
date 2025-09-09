@@ -1,0 +1,30 @@
+meta {
+  name: Add a new pet to the store.
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/pet
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "id": 123456777,
+    "name": "",
+    "category": {
+      "id": 0,
+      "name": ""
+    },
+    "photoUrls": [],
+    "tags": [
+      {
+        "id": 0,
+        "name": ""
+      }
+    ],
+    "status": ""
+  }
+}
