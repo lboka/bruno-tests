@@ -22,10 +22,20 @@ jobs:
       - name: Install Bruno CLI
         run: npm install -g @usebruno/cli
 
+      - name: Show files
+        run: |
+          pwd
+          ls -la
+          find . -maxdepth 3 -type f -name "*.bru" -print
+
+      - name: Bruno version
+        run: bru --version
+
+
       # Spusti collection (root priečinok alebo konkrétny folder)
       - name: Run Bruno (CI env)
         run: |
-          bru run . \
+          bru run ./pet \
             --env env-qa \
             --reporter-html bruno-results.html \
             --reporter-junit bruno-results.xml
